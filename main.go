@@ -92,11 +92,11 @@ func main() {
 	// 	log.Fatalf("Error creating schema",err)
 	// }
 	query := `{ 
+		tutorial(:id)
 		list{
 			id
 			title
 			author
-			
 		}
 		}`
 	params := graphql.Params{Schema: schema, RequestString: query}
